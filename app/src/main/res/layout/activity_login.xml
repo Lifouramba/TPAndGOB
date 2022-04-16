@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvV1"
+        android:layout_width="match_parent"
+        android:paddingTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:background="#C5C7C9"
+        android:paddingBottom="20dp"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/WTo"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tvV1"
+        android:text="Welcome To"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WTo"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Enter your phone number or Email address for sign in. Enjoy your food :)"
+        android:layout_marginStart="4dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_search"
+        android:layout_below="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp">
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="58dp"
+            android:background="#C5C7C9"
+            android:drawableEnd="@drawable/ic_post"
+            android:hint="Email address"
+            android:padding="5dp"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_search"
+        android:layout_below="@+id/line1"
+        android:layout_height="57dp">
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="52dp"
+            android:background="#C5C7C9"
+            android:hint="Password"
+            android:drawableEnd="@drawable/ic_eye"
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionDone"
+            />
+    </RelativeLayout>
+
+
+    <CheckBox
+        android:id="@+id/remmberMeCheck"
+        android:buttonTint="@color/bg_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Remember Me"
+        android:textColor="@color/bg_green" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/remmberMeCheck"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-41dp"
+        android:layout_marginEnd="15dp"
+        android:text="Forgot Password?" />
+
+    <Button
+        android:id="@+id/Connexion"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/remmberMeCheck"
+        android:text="SIGN IN"
+        android:textSize="19sp"
+        app:cornerRadius="7dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        />
+
+    <TextView
+        android:id="@+id/Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Connexion"
+        android:layout_marginStart="9dp"
+        android:text="Don't have account?"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/NewCompte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Connexion"
+        android:layout_toEndOf="@+id/Account"
+        android:text="Create new account"
+        android:textColor="@color/bg_green"
+        android:layout_marginStart="125dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Account"
+        android:layout_toEndOf="@+id/Account"
+        android:layout_marginStart="70dp"
+        android:text="OR"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/Facebook"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/Or"
+        android:backgroundTint="@color/bg_fcbk"
+        android:drawableLeft="@drawable/fcbk"
+        android:text="CONNECT WITH FACEBOOK"
+        app:cornerRadius="7dp"
+        />
+
+    <Button
+        android:id="@+id/Google"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/Facebook"
+        android:text="CONNECT WITH GOOGLE"
+        android:drawableLeft="@drawable/ggle"
+        app:cornerRadius="7dp"
+        android:backgroundTint="@color/bg_google"
+        />
+</RelativeLayout>
